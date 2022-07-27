@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <title>Ontology map maker</title>
+    <style>
+        .mermaid {
+            text-align: center;
+            width: unset;
+        }
+    </style>
+    <script src="./src/index.js"></script>
+</head>
+
+<body>
+    <div class="container mx-auto col-6">
+        <h1>Ontology map creator</h1>
+
+        <form class="form-group" id="main-form">
+            <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="ontology-term">Term IDs (comma separated)</label>
+                    <input type="text" class="form-control" id="ontology-term" value="FYPO:0007954,FYPO:0004650">
+                </div>
+                <div class="col-auto">
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="" id="requestChildren" checked>
+                        <label class="form-check-label" for="requestChildren">
+                            Request children
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="" id="requestParents" checked>
+                        <label class="form-check-label" for="requestParents">
+                            Request parents
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="" id="tree-left2right">
+                        <label class="form-check-label" for="tree-left2right">
+                            Show tree left to right
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id='loading-ontologies' >LOADING ONTOLOGIES</div>
+            <input id='submit-button' hidden type="submit" class="btn btn-primary m-2" />
+        </form>
+        <button id="copytext-button" class="btn btn-success m-2" >Copy mermaid code</button>
+
+        <pre><code id="markdown-result" hidden onclick="copyText()">
+        </code></pre>
+    </div>
+    </div>
+    <div class="mermaid" id="mermaid">
+</body>
+
+
+</html>
