@@ -33,6 +33,8 @@ function formatPredicate(predicate) {
       return "has_part";
     case "http://purl.obolibrary.org/obo/fypo#output_of":
       return "output_of";
+    case "http://purl.obolibrary.org/obo/fypo#has_output":
+      return "has_output";
     default:
       return predicate;
   }
