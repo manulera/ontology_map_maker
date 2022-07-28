@@ -14,15 +14,15 @@ async function fetchOntologies() {
     throw new Error(`Error! status: ${fypo_resp.status}`);
   }
 
-  const go_resp = await fetch(
-    "http://current.geneontology.org/ontology/go.json"
-  );
-  if (!go_resp.ok) {
-    throw new Error(`Error! status: ${go_resp.status}`);
-  }
+  //   const go_resp = await fetch(
+  //     "http://current.geneontology.org/ontology/go.json"
+  //   );
+  //   if (!go_resp.ok) {
+  //     throw new Error(`Error! status: ${go_resp.status}`);
+  //   }
 
   ONTOLOGY_DICT.FYPO = new OboGraphViz(await fypo_resp.json());
-  ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
+  //   ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
 }
 
 function formatPredicate(predicate) {
