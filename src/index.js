@@ -1,4 +1,5 @@
 import { OboGraphViz } from "obographviz";
+import BbopGraph from "bbop-graph";
 
 const ONTOLOGY_DICT = {
   FYPO: null,
@@ -24,18 +25,8 @@ async function fetchOntologies() {
   //   ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
 }
 
-async function getGraph(termId) {
-  const element = document.createElement("div");
-  let ontologyName = termId.split(":")[0];
-
-  const ogv = ONTOLOGY_DICT[ontologyName];
-
-  const newGraph = ogv.createBbopGraph();
-  const termUrl = `http://purl.obolibrary.org/obo/${termId.replace(":", "_")}`;
-  const parentGraph = newGraph.get_descendent_subgraph(termUrl);
-  const childGraph = newGraph.get_ancestor_subgraph(termUrl);
-  parentGraph.merge_in(childGraph);
-  const relationships = parentGraph.all_edges().map((edge) => {
+function formatGraphForDisplay(graph) {
+  const relationships = graph.all_edges().map((edge) => {
     return {
       id: edge.object_id(),
       parent: edge.subject_id(),
@@ -44,8 +35,7 @@ async function getGraph(termId) {
     };
   });
 
-  const terms = parentGraph.all_nodes().map((node) => {
-    console.log(node);
+  const terms = graph.all_nodes().map((node) => {
     return {
       id: node.id(),
       label: node.label(),
@@ -53,6 +43,30 @@ async function getGraph(termId) {
   });
 
   return { terms, relationships };
+}
+
+function mergeGraphs(graphs) {
+  return graphs.reduce((prev, next) => {
+    prev.merge_in(next);
+    return prev;
+  }, new BbopGraph.graph());
+}
+
+async function getGraph(termId, getParents, getChildren) {
+  let ontologyName = termId.split(":")[0];
+
+  const ogv = ONTOLOGY_DICT[ontologyName];
+
+  const newGraph = ogv.createBbopGraph();
+  const termUrl = `http://purl.obolibrary.org/obo/${termId.replace(":", "_")}`;
+  const graphs = [];
+  if (getParents) {
+    graphs.push(newGraph.get_descendent_subgraph(termUrl));
+  }
+  if (getChildren) {
+    graphs.push(newGraph.get_ancestor_subgraph(termUrl));
+  }
+  return mergeGraphs(graphs);
 }
 
 var mermaidText = "";
@@ -84,7 +98,6 @@ function updateMermaidText(terms, relationships, submittedIds) {
   relationships.forEach((r) => {
     const parent = terms.find((term) => term.id === r.parent);
     const child = terms.find((term) => term.id === r.child);
-    console.log(r.type);
     mermaidLines.push(
       `      ${parent.id}["${termWithLink(parent, submittedIds)}"]-->|${
         r.type
@@ -103,12 +116,28 @@ async function makePostRequest(submitEvent) {
   const submittedIds = document
     .getElementById("ontology-term")
     .value.split(",");
+  const getParents = document.getElementById("requestParents").checked;
+  const getChildren = document.getElementById("requestChildren").checked;
+  const mergedGraph = mergeGraphs(
+    await Promise.all(
+      submittedIds.map(
+        async (id) => await getGraph(id, getParents, getChildren)
+      )
+    )
+  );
 
-  const graph = await getGraph(submittedIds[0]);
+  if (mergedGraph.all_nodes().length === 0) {
+    return;
+  }
 
+  const displayGraph = formatGraphForDisplay(mergedGraph);
   const codeblock = document.getElementById("markdown-result");
   const mermaidblock = document.getElementById("mermaid");
-  updateMermaidText(graph.terms, graph.relationships, submittedIds);
+  updateMermaidText(
+    displayGraph.terms,
+    displayGraph.relationships,
+    submittedIds
+  );
 
   codeblock.textContent = mermaidText;
   const textArray = mermaidText.split(/\r?\n/);
