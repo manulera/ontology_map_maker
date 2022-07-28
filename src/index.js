@@ -25,13 +25,26 @@ async function fetchOntologies() {
   //   ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
 }
 
+function formatPredicate(predicate) {
+  switch (predicate) {
+    case "http://purl.obolibrary.org/obo/BFO_0000050":
+      return "part_of";
+    case "http://purl.obolibrary.org/obo/BFO_0000051":
+      return "has_part";
+    case "http://purl.obolibrary.org/obo/fypo#output_of":
+      return "output_of";
+    default:
+      return predicate;
+  }
+}
+
 function formatGraphForDisplay(graph) {
   const relationships = graph.all_edges().map((edge) => {
     return {
       id: edge.object_id(),
       parent: edge.subject_id(),
       child: edge.object_id(),
-      type: edge.predicate_id(),
+      type: formatPredicate(edge.predicate_id()),
     };
   });
 
