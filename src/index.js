@@ -73,10 +73,10 @@ async function getGraph(termId, getParents, getChildren) {
   const newGraph = ogv.createBbopGraph();
   const termUrl = `http://purl.obolibrary.org/obo/${termId.replace(":", "_")}`;
   const graphs = [];
-  if (getParents) {
+  if (getChildren) {
     graphs.push(newGraph.get_descendent_subgraph(termUrl));
   }
-  if (getChildren) {
+  if (getParents) {
     graphs.push(newGraph.get_ancestor_subgraph(termUrl));
   }
   return mergeGraphs(graphs);
