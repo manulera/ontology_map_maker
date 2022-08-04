@@ -13,15 +13,17 @@ async function fetchOntologies() {
   if (!fypo_resp.ok) {
     throw new Error(`Error! status: ${fypo_resp.status}`);
   }
-  
+  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>FYPO fetched!</div>')
 
   const go_resp = await fetch("/go/go.json");
   if (!go_resp.ok) {
     throw new Error(`Error! status: ${go_resp.status}`);
   }
-
+  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>GO fetched!</div>')
   ONTOLOGY_DICT.FYPO = new OboGraphViz(await fypo_resp.json());
+  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>FYPO read!</div>')
   ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
+  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>GO read!</div>')
 }
 
 function formatPredicate(predicate) {
@@ -141,7 +143,7 @@ async function makePostRequest(submitEvent) {
   submitEvent.preventDefault();
   const submittedIds = document
     .getElementById("ontology-term")
-    .value.split(",");
+    .value.replace(/\s/g, '').split(",");
   const getParents = document.getElementById("requestParents").checked;
   const getChildren = document.getElementById("requestChildren").checked;
   const mergedGraph = mergeGraphs(
