@@ -13,13 +13,12 @@ async function fetchOntologies() {
   if (!fypo_resp.ok) {
     throw new Error(`Error! status: ${fypo_resp.status}`);
   }
+  
 
-    const go_resp = await fetch(
-      "/go/go.json"
-    );
-    if (!go_resp.ok) {
-      throw new Error(`Error! status: ${go_resp.status}`);
-    }
+  const go_resp = await fetch("/go/go.json");
+  if (!go_resp.ok) {
+    throw new Error(`Error! status: ${go_resp.status}`);
+  }
 
   ONTOLOGY_DICT.FYPO = new OboGraphViz(await fypo_resp.json());
   ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
@@ -194,7 +193,7 @@ window.onload = () => {
     .addEventListener("click", copyText);
   fetchOntologies().then(() => {
     document.getElementById("submit-button").removeAttribute("hidden");
-    // document.getElementById("loading-ontologies").removeAttribute("hidden");
+    document.getElementById("loading-ontologies").textContent = 'Ontologies loaded!';
     document
       .getElementById("main-form")
       .addEventListener("submit", makePostRequest);
