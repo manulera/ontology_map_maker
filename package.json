@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bbop-graph": "github:manulera/bbop-graph",
+    "http-proxy-middleware": "^2.0.6",
     "obographviz": "^0.4.1"
   }
 }

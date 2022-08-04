@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/go"
+to = "/http://current.geneontology.org/ontology/"
+status = 200
+force = true
