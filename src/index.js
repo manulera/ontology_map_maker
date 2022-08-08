@@ -3,8 +3,8 @@ import BbopGraph from "bbop-graph";
 
 const ONTOLOGY_DICT = {
   FYPO: {url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null},
-//   GO: {url: '/go/go.json', graph: null},
-//   CL: {url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null},
+  GO: {url: '/go/go.json', graph: null},
+  CL: {url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null},
 };
 
 async function fetchOntologies() {
