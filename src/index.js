@@ -2,48 +2,23 @@ import { OboGraphViz } from "obographviz";
 import BbopGraph from "bbop-graph";
 
 const ONTOLOGY_DICT = {
-  FYPO: null,
-  GO: null,
-  CL: null
+  FYPO: {url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null},
+//   GO: {url: '/go/go.json', graph: null},
+//   CL: {url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null},
 };
 
 async function fetchOntologies() {
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Fetching FYPO...</div>')
-  const fypo_resp = await fetch(
-    "https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json"
-  );
-  if (!fypo_resp.ok) {
-    throw new Error(`Error! status: ${fypo_resp.status}`);
-  }
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>FYPO fetched!</div>')
-
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Fetching GO...</div>')
-  const go_resp = await fetch("/go/go.json");
-  if (!go_resp.ok) {
-    throw new Error(`Error! status: ${go_resp.status}`);
-  }
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>GO fetched!</div>')
-
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Fetching CL...</div>')
-  const cl_resp = await fetch(
-    "https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json"
-  );
-  if (!cl_resp.ok) {
-    throw new Error(`Error! status: ${cl_resp.status}`);
-  }
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>CL fetched!</div>')
-
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Reading FYPO...</div>')
-  ONTOLOGY_DICT.FYPO = new OboGraphViz(await fypo_resp.json());
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>FYPO read!</div>')
-
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Reading GO...</div>')
-  ONTOLOGY_DICT.GO = new OboGraphViz(await go_resp.json());
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>GO read!</div>')
-
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>Reading CL...</div>')
-  ONTOLOGY_DICT.CL = new OboGraphViz(await cl_resp.json());
-  document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd','<div>CL read!</div>')
+    for (const key of Object.keys(ONTOLOGY_DICT)) {
+        const ontology = ONTOLOGY_DICT[key]
+        document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Fetching ${key}...</div>`)
+        const resp = await fetch(ontology.url);
+        if (!resp.ok) {
+            document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Error: ${resp.status}</div>`)
+            throw new Error(`Error! status: ${resp.status}`);
+          }
+        document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Reading ${key}...</div>`)
+        ontology.graph = new OboGraphViz(await resp.json());
+    }
 }
 
 function formatPredicate(predicate) {
@@ -103,8 +78,7 @@ function mergeGraphs(graphs) {
 async function getGraph(termId, getParents, getChildren) {
   let ontologyName = termId.split(":")[0];
 
-  const ogv = ONTOLOGY_DICT[ontologyName];
-
+  const ogv = ONTOLOGY_DICT[ontologyName].graph;
   const newGraph = ogv.createBbopGraph();
   const termUrl = `http://purl.obolibrary.org/obo/${termId.replace(":", "_")}`;
   const graphs = [];
@@ -174,6 +148,7 @@ async function makePostRequest(submitEvent) {
     )
   );
 
+
   if (mergedGraph.all_nodes().length === 0) {
     return;
   }
@@ -192,7 +167,10 @@ async function makePostRequest(submitEvent) {
   const mermaidOnlyText = textArray.slice(1, textArray.length - 2).join("\n");
   mermaidblock.textContent = mermaidOnlyText;
   mermaidblock.removeAttribute("data-processed");
-  mermaid.init(undefined);
+  const maxTextSize = Number(document.getElementById("max-mermaid-size").value);
+  console.log(maxTextSize)
+  mermaid.initialize({maxTextSize})
+  mermaid.init();
   const svgElement = document.getElementsByTagName("svg")[0];
   svgElement.style.maxWidth = "unset";
   svgElement.style.width = "unset";
