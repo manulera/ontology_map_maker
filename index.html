@@ -31,6 +31,9 @@
 
                     <label for="max-mermaid-size">Max mermaid graph size</label>
                     <input type="text" class="form-control" id="max-mermaid-size" value="50000">
+
+                    <label for="mermaid-map-width">Mermaid graph width (in pixels)</label>
+                    <input type="text" class="form-control" id="mermaid-map-width" value="">
                 </div>
                 <div class="col-auto">
                     <div>
@@ -53,10 +56,11 @@
                     </div>
                 </div>
             </div>
-            <div id='loading-ontologies' >Loading ontologies...</div>
+            <div id='loading-ontologies'>Loading ontologies...</div>
             <input id='submit-button' hidden type="submit" class="btn btn-primary m-2" />
         </form>
-        <button id="copytext-button" class="btn btn-success m-2" >Copy mermaid code</button>
+        <button id="copytext-button" class="btn btn-success m-2">Copy mermaid code</button>
+        <!-- <button id="export-graph-button" class="btn btn-success m-2">Export graph as svg</button> -->
 
         <pre><code id="markdown-result" hidden onclick="copyText()">
         </code></pre>

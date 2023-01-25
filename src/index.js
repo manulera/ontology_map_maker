@@ -2,23 +2,23 @@ import { OboGraphViz } from "obographviz";
 import BbopGraph from "bbop-graph";
 
 const ONTOLOGY_DICT = {
-  FYPO: {url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null},
-  GO: {url: '/go/go.json', graph: null},
-  CL: {url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null},
+  FYPO: { url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null },
+  GO: { url: '/go/go.json', graph: null },
+  CL: { url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null },
 };
 
 async function fetchOntologies() {
-    for (const key of Object.keys(ONTOLOGY_DICT)) {
-        const ontology = ONTOLOGY_DICT[key]
-        document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Fetching ${key}...</div>`)
-        const resp = await fetch(ontology.url);
-        if (!resp.ok) {
-            document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Error: ${resp.status}</div>`)
-            throw new Error(`Error! status: ${resp.status}`);
-          }
-        document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd',`<div>Reading ${key}...</div>`)
-        ontology.graph = new OboGraphViz(await resp.json());
+  for (const key of Object.keys(ONTOLOGY_DICT)) {
+    const ontology = ONTOLOGY_DICT[key]
+    document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd', `<div>Fetching ${key}...</div>`)
+    const resp = await fetch(ontology.url);
+    if (!resp.ok) {
+      document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd', `<div>Error: ${resp.status}</div>`)
+      continue
     }
+    document.getElementById("loading-ontologies").insertAdjacentHTML('beforeEnd', `<div>Reading ${key}...</div>`)
+    ontology.graph = new OboGraphViz(await resp.json());
+  }
 }
 
 function formatPredicate(predicate) {
@@ -75,6 +75,12 @@ function mergeGraphs(graphs) {
   }, new BbopGraph.graph());
 }
 
+function printIdsOfNodes(graph) {
+  const httpIds = graph.all_edges().map((edge) => edge.subject_id())
+  const ids = [...new Set(httpIds)].map(t => t.split("/").pop().replace("_", ":"))
+  console.log(ids.join('\n'))
+}
+
 async function getGraph(termId, getParents, getChildren) {
   let ontologyName = termId.split(":")[0];
 
@@ -84,9 +90,13 @@ async function getGraph(termId, getParents, getChildren) {
   const graphs = [];
   if (getChildren) {
     graphs.push(newGraph.get_descendent_subgraph(termUrl));
+    console.log('all Children ids')
+    printIdsOfNodes(graphs[graphs.length - 1])
   }
   if (getParents) {
     graphs.push(newGraph.get_ancestor_subgraph(termUrl));
+    console.log('all Parent ids')
+    printIdsOfNodes(graphs[graphs.length - 1])
   }
   return mergeGraphs(graphs);
 }
@@ -106,9 +116,8 @@ function termWithLink(term, submittedIds) {
     GO: "https://www.ebi.ac.uk/QuickGO/term/",
   };
   let ontologyName = termId.split(":")[0];
-  let text = `<a href=${
-    linkDict[ontologyName]
-  }${termId}>${termId}</a><br>${editName(term.label)}`;
+  let text = `<a href=${linkDict[ontologyName]
+    }${termId}>${termId}</a><br>${editName(term.label)}`;
   if (submittedIds.includes(termId)) {
     text = `<u><strong>${text}</strong></u>`;
   }
@@ -121,8 +130,7 @@ function updateMermaidText(terms, relationships, submittedIds) {
     const parent = terms.find((term) => term.id === r.parent);
     const child = terms.find((term) => term.id === r.child);
     mermaidLines.push(
-      `      ${parent.id}["${termWithLink(parent, submittedIds)}"]-->|${
-        r.type
+      `      ${parent.id}["${termWithLink(parent, submittedIds)}"]-->|${r.type
       }|${child.id}["${termWithLink(child, submittedIds)}"];`
     );
   });
@@ -169,7 +177,7 @@ async function makePostRequest(submitEvent) {
   mermaidblock.removeAttribute("data-processed");
   const maxTextSize = Number(document.getElementById("max-mermaid-size").value);
   console.log(maxTextSize)
-  mermaid.initialize({maxTextSize})
+  mermaid.initialize({ maxTextSize })
   mermaid.init();
   const svgElement = document.getElementsByTagName("svg")[0];
   svgElement.style.maxWidth = "unset";
@@ -187,10 +195,40 @@ function copyText() {
     });
 }
 
+function adjustGraphWidth(e) {
+  const mermaidGraph = document.getElementById("mermaid");
+
+  mermaidGraph.style.width = e.target.value + 'px'
+}
+
+function downloadGraph() {
+  const element = document.getElementsByTagName("svg")[0];
+
+  // Create a Blob with the HTML as its contents
+  const blob = new Blob([element.outerHTML.replace(/<br>/g, "<br/>")], { type: "text/plain" });
+
+  // Create a link element
+  const a = document.createElement("a");
+
+  // Set the href of the link to the URL of the Blob
+  a.href = URL.createObjectURL(blob);
+
+  // Set the download attribute of the link to the desired file name
+  a.download = "graph.svg";
+
+  // Click the link to trigger the download
+  a.click();
+}
+
 window.onload = () => {
+  document.getElementById("mermaid-map-width")
+    .addEventListener("input", adjustGraphWidth);
   document
     .getElementById("copytext-button")
     .addEventListener("click", copyText);
+  document
+  // .getElementById("export-graph-button")
+  // .addEventListener("click", downloadGraph);
   fetchOntologies().then(() => {
     document.getElementById("submit-button").removeAttribute("hidden");
     document.getElementById("loading-ontologies").textContent = 'Ontologies loaded!';
