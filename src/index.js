@@ -5,6 +5,7 @@ const ONTOLOGY_DICT = {
   FYPO: { url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null },
   GO: { url: '/go/go.json', graph: null },
   CL: { url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null },
+  FBcv: {url: 'https://raw.githubusercontent.com/FlyBase/flybase-controlled-vocabulary/master/fbcv-full.json', graph: null}
 };
 
 async function fetchOntologies() {
@@ -109,11 +110,16 @@ function editName(name) {
 }
 
 function termWithLink(term, submittedIds) {
+  // Edge case of owl:thing having no label
+  if (!term.label) {
+    return '<div>root</div>'
+  }
   const termId = term.id.split("/").pop().replace("_", ":");
 
   let linkDict = {
     FYPO: "https://www.pombase.org/term/",
     GO: "https://www.ebi.ac.uk/QuickGO/term/",
+    FBcv: "https://flybase.org/cgi-bin/cvreport.pl?id=",
   };
   let ontologyName = termId.split(":")[0];
   let text = `<a href=${linkDict[ontologyName]
