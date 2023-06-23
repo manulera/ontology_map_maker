@@ -1,0 +1,23 @@
+name: Update ontologies
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-file:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: master
+      - name: Download ontologies
+        run: |
+          bash get_latest_ontologies.sh
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: updated to last revision
+          file_pattern: "ontology_files/*.json"

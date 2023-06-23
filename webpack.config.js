@@ -9,14 +9,7 @@ module.exports = {
   devtool: "inline-source-map",
   // To be compatible with netlify redirects
   devServer: {
-    static: "./dist",
-    proxy: {
-      "/go/**": {
-        target: "http://current.geneontology.org/ontology/",
-        pathRewrite: { "^/go": "" },
-        changeOrigin: true,
-      },
-    },
+    static: "./dist"
   },
   plugins: [
     new HtmlWebpackPlugin({

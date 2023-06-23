@@ -1,5 +1,0 @@
-[[redirects]]
-from = "/go/*"
-to = "http://current.geneontology.org/ontology/:splat"
-status = 200
-force = true

@@ -2,10 +2,10 @@ import { OboGraphViz } from "obographviz";
 import BbopGraph from "bbop-graph";
 
 const ONTOLOGY_DICT = {
-  FYPO: { url: 'https://raw.githubusercontent.com/pombase/fypo/master/fypo-full.json', graph: null },
-  GO: { url: '/go/go.json', graph: null },
-  CL: { url: 'https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl-full.json', graph: null },
-  FBcv: {url: 'https://raw.githubusercontent.com/FlyBase/flybase-controlled-vocabulary/master/fbcv-full.json', graph: null}
+  FYPO: { url: 'https://raw.githubusercontent.com/manulera/ontology_map_maker/master/ontology_files/fypo-full.json', graph: null },
+  GO: { url: 'https://raw.githubusercontent.com/manulera/ontology_map_maker/master/ontology_files/go.json', graph: null },
+  CL: { url: 'https://raw.githubusercontent.com/manulera/ontology_map_maker/master/ontology_files/cl-full.json', graph: null },
+  FBcv: {url: 'https://raw.githubusercontent.com/manulera/ontology_map_maker/master/ontology_files/fbcv-full.json', graph: null}
 };
 
 async function fetchOntologies() {
