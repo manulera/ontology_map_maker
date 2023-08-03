@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "06:07:2023 09:07"
+        "val" : "02:08:2023 18:24"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-07-06"
+        "val" : "2023-08-02"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-07-06/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-08-02/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -60266,8 +60266,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain. A functional transcription driver can be reconstituted if this split system component is brought together in vivo with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain.",
-          "xrefs" : [ "FBC:GM", "FlyBase:FBrf0193617" ]
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that includes a DNA-binding domain and which can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment that encodes a transcription activation domain, for example by including a compatible physical interaction domain or split intein fragment in each of the complementary split driver fragments.",
+          "xrefs" : [ "FBC:GM" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -60286,8 +60286,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain. A functional transcription driver can be reconstituted if this split system component is brought together in vivo with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain.",
-          "xrefs" : [ "FBC:GM", "FlyBase:FBrf0193617" ]
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that includes a transcription activation domain and which can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment that encodes a DNA-binding domain, for example by including a compatible physical interaction domain or split intein fragment in each of the complementary split driver fragments.",
+          "xrefs" : [ "FBC:GM" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/fbcv#common_tool_use" ],
         "basicPropertyValues" : [ {
@@ -62151,123 +62151,105 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007053",
-      "lbl" : "conditional split driver - transcription activation fragment",
+      "lbl" : "obsolete conditional split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by a particular stimulus. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005055"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:32:02Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009028"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007054",
-      "lbl" : "light-regulated split driver - transcription activation fragment",
+      "lbl" : "obsolete light-regulated split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by irradiation with a pulse of light. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate light stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005055"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:33:41Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009029"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007055",
-      "lbl" : "small molecule-regulated split driver - transcription activation fragment",
+      "lbl" : "obsolete small molecule-regulated split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by binding to a small molecule, such as an ion or ligand. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate small molecule stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005055"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:34:38Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009030"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007056",
-      "lbl" : "conditional split driver - DNA-binding fragment",
+      "lbl" : "obsolete conditional split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by a particular stimulus. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005054"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:35:30Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009028"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007057",
-      "lbl" : "light-regulated split driver - DNA-binding fragment",
+      "lbl" : "obsolete light-regulated split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by irradiation with a pulse of light. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate light stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005054"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:37:56Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009029"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007058",
-      "lbl" : "small molecule-regulated split driver - DNA-binding fragment",
+      "lbl" : "obsolete small molecule-regulated split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by binding to a small molecule, such as an ion or ligand. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate small molecule stimulus is applied.",
-          "xrefs" : [ "FBC:GM" ]
-        },
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "http://orcid.org/0000-0002-1373-1705"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0009030"
         }, {
-          "pred" : "http://purl.org/dc/terms/date",
-          "val" : "2022-05-04T14:38:38Z"
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "FBcv:0005054"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "experimental_tool_descriptor"
-        } ]
+          "val" : "FlyBase miscellaneous CV"
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0007059",
@@ -64205,6 +64187,106 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "result_type"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009026",
+      "lbl" : "split system combination",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A combination of two or more 'split system components' that together reconstitute a functional experimental tool.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-07-24T11:13:29Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009027",
+      "lbl" : "split driver fragment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment, for example by including a compatible physical interaction domain or split intein fragment in each of the complementary split driver fragments.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-07-31T17:10:54Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009028",
+      "lbl" : "conditional split driver fragment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment, where the process that brings the complementary fragments together can be regulated in response to a particular stimulus.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-07-31T17:13:57Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009029",
+      "lbl" : "light-regulated split driver fragment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment, where the process that brings the complementary fragments together can be regulated by irradiation with a pulse of light.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-07-31T17:16:35Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009030",
+      "lbl" : "small-molecule regulated split driver fragment",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a transcriptional activator ('driver') that can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment, where the process that brings the complementary fragments together can be regulated by binding to a small molecule, such as an ion or ligand.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2023-07-31T17:18:43Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
         } ]
       }
     }, {
@@ -80020,11 +80102,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005054",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005055",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005056",
       "pred" : "is_a",
@@ -80373,30 +80455,6 @@
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007052",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0005035"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007053",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005055"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007054",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0007053"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007055",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0007053"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007056",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005054"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007057",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0007056"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/FBcv_0007058",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0007056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007059",
       "pred" : "is_a",
@@ -80837,6 +80895,26 @@
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009025",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0003088"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009026",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009028",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009029",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009028"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009030",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009028"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "subPropertyOf",
