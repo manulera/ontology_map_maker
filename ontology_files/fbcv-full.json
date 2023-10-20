@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "02:08:2023 18:24"
+        "val" : "19:10:2023 10:56"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-08-02"
+        "val" : "2023-10-19"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-08-02/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-10-19/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -272,7 +272,7 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "preceded_by"
         }, {
-          "pred" : "http://purl.org/dc/elements/1.1/source",
+          "pred" : "http://purl.org/dc/terms/source",
           "val" : "http://www.obofoundry.org/ro/#OBO_REL:preceded_by"
         } ]
       }
@@ -64271,13 +64271,17 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0009030",
-      "lbl" : "small-molecule regulated split driver fragment",
+      "lbl" : "small molecule-regulated split driver fragment",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
           "val" : "Non-functional fragment of a transcriptional activator ('driver') that can be used to reconstitute a functional transcription driver when brought together in vivo with a complementary split driver fragment, where the process that brings the complementary fragments together can be regulated by binding to a small molecule, such as an ion or ligand.",
           "xrefs" : [ "FBC:GM" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "small-molecule regulated split driver fragment"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-6095-8718"
@@ -64622,15 +64626,9 @@
           "xrefs" : [ "FBC:DPG" ]
         },
         "comments" : [ "Creating this relation as a temporary fix, pending adding the axiom occurrent_part_of subproperty of happens_during to RO." ],
-        "xrefs" : [ {
-          "val" : "FBdv:00018001"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "relationship"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "substage_of"
         } ]
       }
     }, {
@@ -64758,7 +64756,7 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "has_participant"
         }, {
-          "pred" : "http://purl.org/dc/elements/1.1/source",
+          "pred" : "http://purl.org/dc/terms/source",
           "val" : "http://www.obofoundry.org/ro/#OBO_REL:has_participant"
         } ]
       }
@@ -64877,9 +64875,6 @@
         "definition" : {
           "val" : "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"
         },
-        "xrefs" : [ {
-          "val" : "RO:0000087"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
           "val" : "this person has role this investigator role (more colloquially: this person has this role of investigator)"
@@ -64888,12 +64883,6 @@
           "val" : "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "has_role"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "FlyBase miscellaneous CV"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "has_role"
         } ]
       }
@@ -66553,19 +66542,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002610",
-      "lbl" : "correlated with",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "A relationship that holds between two entities, where the entities exhibit a statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
-          "val" : "Groups both positive and negative correlation"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002629",
       "lbl" : "directly positively regulates",
       "type" : "PROPERTY",
@@ -66829,22 +66805,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0017003",
-      "lbl" : "positively correlated with",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "A relation between entities in which one increases or decreases as the other does the same."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "directly correlated with"
-        }, {
-          "pred" : "http://purl.org/dc/terms/contributor",
-          "val" : "https://orcid.org/0000-0003-1909-9269"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0019000",
       "lbl" : "regulates characteristic",
       "type" : "PROPERTY",
@@ -67039,6 +66999,10 @@
       "lbl" : "consider",
       "type" : "PROPERTY"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "lbl" : "created by",
+      "type" : "PROPERTY"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
       "lbl" : "has_alternative_id",
       "type" : "PROPERTY"
@@ -67073,6 +67037,10 @@
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasScope",
       "lbl" : "has_scope",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#id",
+      "lbl" : "id",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
@@ -81447,10 +81415,6 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0012012",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0012011"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0017003",
-      "pred" : "subPropertyOf",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002610"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0019000",
       "pred" : "subPropertyOf",
