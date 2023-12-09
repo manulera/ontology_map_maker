@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "19:10:2023 10:56"
+        "val" : "08:12:2023 09:27"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-10-19"
+        "val" : "2023-12-08"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-10-19/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-12-08/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -1109,6 +1109,49 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_139520",
+      "lbl" : "phenolic donor",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any phenol that acts as an electron donor."
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "a phenolic donor",
+          "xrefs" : [ "UniProt" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "phenolic donors",
+          "xrefs" : [ "ChEBI" ]
+        } ],
+        "xrefs" : [ {
+          "val" : "MetaCyc:Phenolic-Donors"
+        }, {
+          "val" : "PMID:16098794"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/chebi/charge",
+          "val" : "0"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/chebi/formula",
+          "val" : "C6H5OR"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/chebi/mass",
+          "val" : "93.104"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/chebi/monoisotopicmass",
+          "val" : "93.03404"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/chebi/smiles",
+          "val" : "OC1=CC=C([*])C=C1"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_140332",
       "lbl" : "4'-methoxyflavanones",
       "type" : "CLASS",
@@ -1223,6 +1266,34 @@
           "pred" : "hasRelatedSynonym",
           "val" : "emetics",
           "xrefs" : [ "ChEBI" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_15022",
+      "lbl" : "electron donor",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A molecular entity that can transfer an electron to another molecular entity."
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
+        "synonyms" : [ {
+          "synonymType" : "http://purl.obolibrary.org/obo/chebi#IUPAC_NAME",
+          "pred" : "hasExactSynonym",
+          "val" : "electron donor",
+          "xrefs" : [ "IUPAC" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Elektronendonator",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "donneur d'electron",
+          "xrefs" : [ "IUPAC" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -67094,10 +67165,6 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_10432",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_10432",
-      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_35682"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_10432",
@@ -67200,6 +67267,18 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_52209"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_139520",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_139520",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33853"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_139520",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_15022"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_140332",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_25240"
@@ -67227,6 +67306,10 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_149552",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_23888"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_15022",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_17891"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_15318",
       "pred" : "is_a",
@@ -72739,6 +72822,10 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_35618",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33659"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_35682",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_139520"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_35682",
       "pred" : "is_a",
