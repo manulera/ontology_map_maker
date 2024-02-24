@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "08:12:2023 09:27"
+        "val" : "23:02:2024 09:19"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-12-08"
+        "val" : "2024-02-23"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2023-12-08/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-02-23/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -6631,10 +6631,6 @@
           "xrefs" : [ "IUPAC" ]
         }, {
           "pred" : "hasRelatedSynonym",
-          "val" : "HX",
-          "xrefs" : [ "UniProt" ]
-        }, {
-          "pred" : "hasRelatedSynonym",
           "val" : "hydrogen halides",
           "xrefs" : [ "ChEBI" ]
         } ],
@@ -6652,7 +6648,7 @@
           "val" : "1.00783"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/chebi/smiles",
-          "val" : "[F,Cl,Br,I]"
+          "val" : "*[H]"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "CHEBI:13368"
@@ -39888,7 +39884,13 @@
           "val" : "receptor modulators",
           "xrefs" : [ "ChEBI" ]
         } ],
+        "xrefs" : [ {
+          "val" : "Wikipedia:Receptor_modulator"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "CHEBI:189678"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "chebi_ontology"
         } ]
@@ -48060,7 +48062,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The radioactive isotope of phosphorus with relative atomic mass 31.973907 and half-life of 14.26 days.",
+          "val" : "The radioactive isotope of phosphorus with relative atomic mass 31.973907 and half-life of 14.26 days (from CHEBI).",
           "xrefs" : [ "CHEBI:37972" ]
         },
         "synonyms" : [ {
@@ -48084,7 +48086,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The radioactive isotope of hydrogen with relative atomic mass 3.016049 and half-life of 12.33 years (from Greek taurhoiotatauomicronsigma, third).",
+          "val" : "The radioactive isotope of hydrogen with relative atomic mass 3.016049 and half-life of 12.33 years (from Greek taurhoiotatauomicronsigma, third) (from CHEBI).",
           "xrefs" : [ "CHEBI:29238" ]
         },
         "synonyms" : [ {
@@ -48132,7 +48134,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Thymidine linked to the radioisotope tritium. Used to label DNA in the study of cellular and viral DNA synthesis.",
+          "val" : "Thymidine linked to the radioisotope tritium. Used to label DNA in the study of cellular and viral DNA synthesis (from CHEBI).",
           "xrefs" : [ "CHEBI:53526" ]
         },
         "synonyms" : [ {
@@ -48351,7 +48353,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.",
+          "val" : "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances (from CHEBI).",
           "xrefs" : [ "CHEBI:24431" ]
         },
         "synonyms" : [ {
@@ -48387,7 +48389,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The diethyl ester of sulfuric acid.",
+          "val" : "The diethyl ester of sulfuric acid (from CHEBI).",
           "xrefs" : [ "CHEBI:34699" ]
         },
         "synonyms" : [ {
@@ -48408,7 +48410,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:19508.",
           "xrefs" : [ "CHEBI:19508" ]
         },
         "synonyms" : [ {
@@ -48429,7 +48431,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:19579.",
           "xrefs" : [ "CHEBI:19579" ]
         },
         "synonyms" : [ {
@@ -48450,7 +48452,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A methanesulfonate ester resulting from the formal condensation of methanesulfonic acid with ethanol.",
+          "val" : "A methanesulfonate ester resulting from the formal condensation of methanesulfonic acid with ethanol (from CHEBI).",
           "xrefs" : [ "CHEBI:23994" ]
         },
         "synonyms" : [ {
@@ -48477,7 +48479,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of N-nitrosoureas that is urea in which one of the nitrogens is substituted by ethyl and nitroso groups.",
+          "val" : "A member of the class of N-nitrosoureas that is urea in which one of the nitrogens is substituted by ethyl and nitroso groups (from CHEBI).",
           "xrefs" : [ "CHEBI:23995" ]
         },
         "synonyms" : [ {
@@ -48505,7 +48507,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A methanesulfonate salt resulting from the reaction of equimolar amounts of hycanthone and methanesulfonic acid. It was formerly used as a schistosomicide for individual or mass treatement of infection with Schistosoma haematobium and S. mansoni, but due to its toxicity and concern about possible carcinogenicity, it has been replaced by other drugs such as praziquantel.",
+          "val" : "A methanesulfonate salt resulting from the reaction of equimolar amounts of hycanthone and methanesulfonic acid. It was formerly used as a schistosomicide for individual or mass treatement of infection with Schistosoma haematobium and S. mansoni, but due to its toxicity and concern about possible carcinogenicity, it has been replaced by other drugs such as praziquantel (from CHEBI).",
           "xrefs" : [ "CHEBI:24624" ]
         },
         "synonyms" : [ {
@@ -48533,7 +48535,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A methanesulfonate ester resulting from the formal condensation of methanesulfonic acid with methanol.",
+          "val" : "A methanesulfonate ester resulting from the formal condensation of methanesulfonic acid with methanol (from CHEBI).",
           "xrefs" : [ "CHEBI:25255" ]
         },
         "synonyms" : [ {
@@ -48560,7 +48562,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An ethyl sulfide that is diethyl sulfide in which a hydrogen from each of the terminal methyl groups is replaced by a chlorine. It is a powerful vesicant regulated under the Chemical Weapons Convention.",
+          "val" : "An ethyl sulfide that is diethyl sulfide in which a hydrogen from each of the terminal methyl groups is replaced by a chlorine. It is a powerful vesicant regulated under the Chemical Weapons Convention (from CHEBI).",
           "xrefs" : [ "CHEBI:25434" ]
         },
         "synonyms" : [ {
@@ -48602,7 +48604,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An N-nitroguanidine compound having nitroso and methyl substituents at the N'-position.",
+          "val" : "An N-nitroguanidine compound having nitroso and methyl substituents at the N'-position (from CHEBI).",
           "xrefs" : [ "CHEBI:21759" ]
         },
         "synonyms" : [ {
@@ -48650,7 +48652,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:13941.",
           "xrefs" : [ "CHEBI:13941" ]
         },
         "synonyms" : [ {
@@ -48668,7 +48670,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A carbamate ester obtained by the formal condensation of ethanol with carbamic acid. It has been found in alcoholic beverages.",
+          "val" : "A carbamate ester obtained by the formal condensation of ethanol with carbamic acid. It has been found in alcoholic beverages (from CHEBI).",
           "xrefs" : [ "CHEBI:17967" ]
         },
         "synonyms" : [ {
@@ -48686,7 +48688,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:27292.",
           "xrefs" : [ "CHEBI:27292" ]
         },
         "synonyms" : [ {
@@ -48722,7 +48724,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:27504.",
           "xrefs" : [ "CHEBI:27504" ]
         },
         "synonyms" : [ {
@@ -48740,7 +48742,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:37595.",
           "xrefs" : [ "CHEBI:37595" ]
         },
         "comments" : [ "Mapped to CHEBI on basis of synonym - quinacrine mustard. Originally primary name, ICR 100 is now relegated to a synonym." ],
@@ -48766,7 +48768,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:21183.",
           "xrefs" : [ "CHEBI:21183" ]
         },
         "synonyms" : [ {
@@ -48787,7 +48789,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A bromoalkane that is ethane carrying bromo substituents at positions 1 and 2. It is produced by marine algae.",
+          "val" : "A bromoalkane that is ethane carrying bromo substituents at positions 1 and 2. It is produced by marine algae (from CHEBI).",
           "xrefs" : [ "CHEBI:28534" ]
         },
         "synonyms" : [ {
@@ -48808,7 +48810,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of chloroethanes substituted by two chloro groups at positions 1 and 2.",
+          "val" : "A member of the class of chloroethanes substituted by two chloro groups at positions 1 and 2 (from CHEBI).",
           "xrefs" : [ "CHEBI:27789" ]
         },
         "synonyms" : [ {
@@ -48829,7 +48831,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A haloalkane that is bromoethane substituted by chlorine at position 2.",
+          "val" : "A haloalkane that is bromoethane substituted by chlorine at position 2 (from CHEBI).",
           "xrefs" : [ "CHEBI:19032" ]
         },
         "synonyms" : [ {
@@ -48850,7 +48852,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A molecule that can substitute for a normal nucleobase in nucleic acids.",
+          "val" : "A molecule that can substitute for a normal nucleobase in nucleic acids (from CHEBI).",
           "xrefs" : [ "CHEBI:67142" ]
         },
         "synonyms" : [ {
@@ -48869,7 +48871,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A pyrimidine having keto groups at the 2- and 4-positions and a bromo group at the 5-position. Used mainly as an experimental mutagen.",
+          "val" : "A pyrimidine having keto groups at the 2- and 4-positions and a bromo group at the 5-position. Used mainly as an experimental mutagen (from CHEBI).",
           "xrefs" : [ "CHEBI:20552" ]
         },
         "synonyms" : [ {
@@ -48887,7 +48889,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A uridine having a bromo substituent at the 5-position.",
+          "val" : "A uridine having a bromo substituent at the 5-position (from CHEBI).",
           "xrefs" : [ "CHEBI:20553" ]
         },
         "synonyms" : [ {
@@ -48923,7 +48925,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:22526.",
           "xrefs" : [ "CHEBI:22526" ]
         },
         "synonyms" : [ {
@@ -48941,7 +48943,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A molecular entity that contains no carbon.",
+          "val" : "A molecular entity that contains no carbon (from CHEBI).",
           "xrefs" : [ "CHEBI:24835" ]
         },
         "synonyms" : [ {
@@ -48963,7 +48965,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A metal sulfate compound having copper(2+) as the metal ion.",
+          "val" : "A metal sulfate compound having copper(2+) as the metal ion (from CHEBI).",
           "xrefs" : [ "CHEBI:23414" ]
         },
         "synonyms" : [ {
@@ -48985,7 +48987,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:33118.",
           "xrefs" : [ "CHEBI:33118" ]
         },
         "synonyms" : [ {
@@ -49003,7 +49005,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An inorganic sodium salt having hydrogensulfite as the counterion.",
+          "val" : "An inorganic sodium salt having hydrogensulfite as the counterion (from CHEBI).",
           "xrefs" : [ "CHEBI:26709" ]
         },
         "synonyms" : [ {
@@ -49021,7 +49023,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A metal fluoride salt with a Na(+) counterion.",
+          "val" : "A metal fluoride salt with a Na(+) counterion (from CHEBI).",
           "xrefs" : [ "CHEBI:28741" ]
         },
         "synonyms" : [ {
@@ -49057,7 +49059,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:23704.",
           "xrefs" : [ "CHEBI:23704" ]
         },
         "synonyms" : [ {
@@ -49081,7 +49083,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:23705.",
           "xrefs" : [ "CHEBI:23705" ]
         },
         "synonyms" : [ {
@@ -49117,7 +49119,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:35299.",
           "xrefs" : [ "CHEBI:35299" ]
         },
         "synonyms" : [ {
@@ -49135,7 +49137,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A methanesulfonate ester that is hexane-2,5-diol in which the hydrogens of the hydroxy groups are replaced by methanesulfonyl groups.",
+          "val" : "A methanesulfonate ester that is hexane-2,5-diol in which the hydrogens of the hydroxy groups are replaced by methanesulfonyl groups (from CHEBI).",
           "xrefs" : [ "CHEBI:67107" ]
         },
         "synonyms" : [ {
@@ -49240,7 +49242,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:19024.",
           "xrefs" : [ "CHEBI:19024" ]
         },
         "synonyms" : [ {
@@ -49258,7 +49260,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A thioxanthen-9-one compound having a methyl substituent at the 1-position and a 2-[(diethylamino)ethyl]amino substituent at the 4-position. Formerly used for the treatment of schistosomiasis. It is a prodrug, being metabolised to hycanthone.",
+          "val" : "A thioxanthen-9-one compound having a methyl substituent at the 1-position and a 2-[(diethylamino)ethyl]amino substituent at the 4-position. Formerly used for the treatment of schistosomiasis. It is a prodrug, being metabolised to hycanthone (from CHEBI).",
           "xrefs" : [ "CHEBI:51052" ]
         },
         "synonyms" : [ {
@@ -49287,7 +49289,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A hydroxyether that is ethanol substituted by a methoxy group at position 2.",
+          "val" : "A hydroxyether that is ethanol substituted by a methoxy group at position 2 (from CHEBI).",
           "xrefs" : [ "CHEBI:46790" ]
         },
         "synonyms" : [ {
@@ -49305,7 +49307,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of 1,4-benzoquinones that is p-benzoquinone in which the hydrogens at positions 2 and 5 are replaced by aziridin-1-yl groups.",
+          "val" : "A member of the class of 1,4-benzoquinones that is p-benzoquinone in which the hydrogens at positions 2 and 5 are replaced by aziridin-1-yl groups (from CHEBI).",
           "xrefs" : [ "CHEBI:19363" ]
         },
         "synonyms" : [ {
@@ -49326,7 +49328,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of tetraphenes that is tetraphene in which the hydrogens at positions 7 and 12 are replaced by bromomethyl and methyl groups, respectively.",
+          "val" : "A member of the class of tetraphenes that is tetraphene in which the hydrogens at positions 7 and 12 are replaced by bromomethyl and methyl groups, respectively (from CHEBI).",
           "xrefs" : [ "CHEBI:20787" ]
         },
         "synonyms" : [ {
@@ -49351,7 +49353,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:27666.",
           "xrefs" : [ "CHEBI:27666" ]
         },
         "synonyms" : [ {
@@ -49369,7 +49371,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An ortho- and peri-fused polycyclic arene consisting of five fused benzene rings.",
+          "val" : "An ortho- and peri-fused polycyclic arene consisting of five fused benzene rings (from CHEBI).",
           "xrefs" : [ "CHEBI:29865" ]
         },
         "synonyms" : [ {
@@ -49391,7 +49393,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee.",
+          "val" : "A trimethylxanthine in which the three methyl groups are located at positions 1, 3, and 7. A purine alkaloid that occurs naturally in tea and coffee (from CHEBI).",
           "xrefs" : [ "CHEBI:27732" ]
         },
         "synonyms" : [ {
@@ -49409,7 +49411,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A diamminedichloroplatinum compound in which the two ammine ligands and two chloro ligands are oriented in a cis planar configuration around the central platinum ion. An anticancer drug that interacts with, and forms cross-links between, DNA and proteins, it is used as a neoplasm inhibitor to treat solid tumours, primarily of the testis and ovary. Commonly but incorrectly described as an alkylating agent due to its mechanism of action (but it lacks alkyl groups).",
+          "val" : "A diamminedichloroplatinum compound in which the two ammine ligands and two chloro ligands are oriented in a cis planar configuration around the central platinum ion. An anticancer drug that interacts with, and forms cross-links between, DNA and proteins, it is used as a neoplasm inhibitor to treat solid tumours, primarily of the testis and ovary. Commonly but incorrectly described as an alkylating agent due to its mechanism of action (but it lacks alkyl groups) (from CHEBI).",
           "xrefs" : [ "CHEBI:27899" ]
         },
         "synonyms" : [ {
@@ -49430,7 +49432,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An  alkaloid that is a carbotricyclic compound comprising 5,6,7,9-tetrahydrobenzo[a]heptalene having four methoxy substituents at the 1-, 2-, 3- and 10-positions as well as an oxo group at the 9-position and an acetamido group at the 7-position. It has been isolated from the plants belonging to genus Colchicum.",
+          "val" : "An  alkaloid that is a carbotricyclic compound comprising 5,6,7,9-tetrahydrobenzo[a]heptalene having four methoxy substituents at the 1-, 2-, 3- and 10-positions as well as an oxo group at the 9-position and an acetamido group at the 7-position. It has been isolated from the plants belonging to genus Colchicum (from CHEBI).",
           "xrefs" : [ "CHEBI:23359" ]
         },
         "synonyms" : [ {
@@ -49448,7 +49450,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A 2-carbon sulfoxide in which the sulfur atom has two methyl substituents.",
+          "val" : "A 2-carbon sulfoxide in which the sulfur atom has two methyl substituents (from CHEBI).",
           "xrefs" : [ "CHEBI:28262" ]
         },
         "synonyms" : [ {
@@ -49466,7 +49468,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "High molecular weight, linear polymers, composed of nucleotides containing deoxyribose and linked by phosphodiester bonds; DNA contain the genetic information of organisms.",
+          "val" : "High molecular weight, linear polymers, composed of nucleotides containing deoxyribose and linked by phosphodiester bonds; DNA contain the genetic information of organisms (from CHEBI).",
           "xrefs" : [ "CHEBI:16991" ]
         },
         "synonyms" : [ {
@@ -49484,7 +49486,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An ether in which the oxygen atom is linked to two ethyl groups.",
+          "val" : "An ether in which the oxygen atom is linked to two ethyl groups (from CHEBI).",
           "xrefs" : [ "CHEBI:35702" ]
         },
         "synonyms" : [ {
@@ -49502,7 +49504,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:30969.",
           "xrefs" : [ "CHEBI:30969" ]
         },
         "synonyms" : [ {
@@ -49523,7 +49525,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A  saturated organic heteromonocyclic parent that is a three-membered heterocycle of two carbon atoms and one oxygen atom.",
+          "val" : "A  saturated organic heteromonocyclic parent that is a three-membered heterocycle of two carbon atoms and one oxygen atom (from CHEBI).",
           "xrefs" : [ "CHEBI:27561" ]
         },
         "synonyms" : [ {
@@ -49549,7 +49551,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:28954.",
           "xrefs" : [ "CHEBI:28954" ]
         },
         "synonyms" : [ {
@@ -49567,7 +49569,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An aldehyde resulting from the formal oxidation of methanol.",
+          "val" : "An aldehyde resulting from the formal oxidation of methanol (from CHEBI).",
           "xrefs" : [ "CHEBI:16842" ]
         },
         "synonyms" : [ {
@@ -49585,7 +49587,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A disaccharide derivative that consists of hesperetin substituted by a 6-O-(alpha-L-rhamnopyranosyl)-beta-D-glucopyranosyl moiety at position 7 via a glycosidic linkage.",
+          "val" : "A disaccharide derivative that consists of hesperetin substituted by a 6-O-(alpha-L-rhamnopyranosyl)-beta-D-glucopyranosyl moiety at position 7 via a glycosidic linkage (from CHEBI).",
           "xrefs" : [ "CHEBI:28775" ]
         },
         "synonyms" : [ {
@@ -49607,7 +49609,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:24564.",
           "xrefs" : [ "CHEBI:24564" ]
         },
         "synonyms" : [ {
@@ -49634,7 +49636,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:24565.",
           "xrefs" : [ "CHEBI:24565" ]
         },
         "synonyms" : [ {
@@ -49658,7 +49660,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Chemical element with atomic number 53.",
+          "val" : "Chemical element with atomic number 53 (from CHEBI).",
           "xrefs" : [ "CHEBI:24859" ]
         },
         "synonyms" : [ {
@@ -49676,7 +49678,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:21184.",
           "xrefs" : [ "CHEBI:21184" ]
         },
         "synonyms" : [ {
@@ -49698,7 +49700,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25234.",
           "xrefs" : [ "CHEBI:25234" ]
         },
         "comments" : [ "Mapped to CHEBI:25234 (1-methoxy-N-nitrosodiethylamine) based on synonym of nitrosodiethylamine being diethylnitrosamine and CHEBI:25234 being classified as a mutagen." ],
@@ -49739,7 +49741,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of N-nitrosoureas that is urea in which one of the nitrogens is substituted by methyl and nitroso groups.",
+          "val" : "A member of the class of N-nitrosoureas that is urea in which one of the nitrogens is substituted by methyl and nitroso groups (from CHEBI).",
           "xrefs" : [ "CHEBI:50102" ]
         },
         "synonyms" : [ {
@@ -49767,7 +49769,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:35807.",
           "xrefs" : [ "CHEBI:35807" ]
         },
         "synonyms" : [ {
@@ -49791,7 +49793,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25813.",
           "xrefs" : [ "CHEBI:25813" ]
         },
         "synonyms" : [ {
@@ -49812,7 +49814,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25814.",
           "xrefs" : [ "CHEBI:25814" ]
         },
         "synonyms" : [ {
@@ -49833,7 +49835,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A phenylalanine derivative comprising L-phenylalanine having [bis(2-chloroethyl)amino group at the 4-position on the phenyl ring.",
+          "val" : "A phenylalanine derivative comprising L-phenylalanine having [bis(2-chloroethyl)amino group at the 4-position on the phenyl ring (from CHEBI).",
           "xrefs" : [ "CHEBI:28876" ]
         },
         "synonyms" : [ {
@@ -49861,7 +49863,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25816.",
           "xrefs" : [ "CHEBI:25816" ]
         },
         "synonyms" : [ {
@@ -49894,7 +49896,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25818.",
           "xrefs" : [ "CHEBI:25818" ]
         },
         "synonyms" : [ {
@@ -49915,7 +49917,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:25829.",
           "xrefs" : [ "CHEBI:25829" ]
         },
         "synonyms" : [ {
@@ -49936,7 +49938,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:26491.",
           "xrefs" : [ "CHEBI:26491" ]
         },
         "synonyms" : [ {
@@ -49954,7 +49956,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:22025.",
           "xrefs" : [ "CHEBI:22025" ]
         },
         "synonyms" : [ {
@@ -49975,7 +49977,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:26800.",
           "xrefs" : [ "CHEBI:26800" ]
         },
         "synonyms" : [ {
@@ -49996,7 +49998,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A member of the class of 1,4-benzoquinones that is 1,4-benzoquinone in which three of the ring hydrogens are replaced by aziridin-1-yl groups.",
+          "val" : "A member of the class of 1,4-benzoquinones that is 1,4-benzoquinone in which three of the ring hydrogens are replaced by aziridin-1-yl groups (from CHEBI).",
           "xrefs" : [ "CHEBI:27090" ]
         },
         "synonyms" : [ {
@@ -50014,7 +50016,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "No description.",
+          "val" : "No definition for CHEBI:27919.",
           "xrefs" : [ "CHEBI:27919" ]
         },
         "synonyms" : [ {
@@ -52184,7 +52186,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A nitrosamine that is N-ethylethanamine substituted by a nitroso group at the N-atom.",
+          "val" : "A nitrosamine that is N-ethylethanamine substituted by a nitroso group at the N-atom (from CHEBI).",
           "xrefs" : [ "CHEBI:34873" ]
         },
         "synonyms" : [ {
@@ -53469,7 +53471,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Compounds having two beta-haloalkyl groups bound to a nitrogen atom, as in (X-CH2-CH2)2NR.",
+          "val" : "Compounds having two beta-haloalkyl groups bound to a nitrogen atom, as in (X-CH2-CH2)2NR (from CHEBI).",
           "xrefs" : [ "CHEBI:37598" ]
         },
         "synonyms" : [ {
@@ -53499,7 +53501,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A methanesulfonate ester that is butane-1,4-diol in which the hydrogens of the hydroxy groups are replaced by methanesulfonyl groups. An alkylating antineoplastic agent, it is used for the treatment of chronic myeloid leukemia (although it has been largely replaced by newer drugs). It is also used as an insect sterilant.",
+          "val" : "A methanesulfonate ester that is butane-1,4-diol in which the hydrogens of the hydroxy groups are replaced by methanesulfonyl groups. An alkylating antineoplastic agent, it is used for the treatment of chronic myeloid leukemia (although it has been largely replaced by newer drugs). It is also used as an insect sterilant (from CHEBI).",
           "xrefs" : [ "CHEBI:28901" ]
         },
         "synonyms" : [ {
@@ -53527,7 +53529,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A monocarboxylic acid that is butanoic acid substituted at position 4 by a 4-[bis(2-chloroethyl)amino]phenyl group. A chemotherapy drug that can be used in combination with the antibody obinutuzumab for the treatment of chronic lymphocytic leukemia.",
+          "val" : "A monocarboxylic acid that is butanoic acid substituted at position 4 by a 4-[bis(2-chloroethyl)amino]phenyl group. A chemotherapy drug that can be used in combination with the antibody obinutuzumab for the treatment of chronic lymphocytic leukemia (from CHEBI).",
           "xrefs" : [ "CHEBI:28830" ]
         },
         "synonyms" : [ {
@@ -62225,7 +62227,18 @@
       "lbl" : "obsolete conditional split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by a particular stimulus. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:32:02Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0005055"
         }, {
@@ -62242,7 +62255,18 @@
       "lbl" : "obsolete light-regulated split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by irradiation with a pulse of light. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate light stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:33:41Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0005055"
         }, {
@@ -62259,7 +62283,18 @@
       "lbl" : "obsolete small molecule-regulated split driver - transcription activation fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a transcription activation domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by binding to a small molecule, such as an ion or ligand. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a DNA-binding domain fused to the complementary heterodimerization domain and the appropriate small molecule stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:34:38Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0005055"
         }, {
@@ -62276,7 +62311,18 @@
       "lbl" : "obsolete conditional split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by a particular stimulus. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:35:30Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0005054"
         }, {
@@ -62293,7 +62339,18 @@
       "lbl" : "obsolete light-regulated split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by irradiation with a pulse of light. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate light stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:37:56Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0005054"
         }, {
@@ -62310,12 +62367,23 @@
       "lbl" : "obsolete small molecule-regulated split driver - DNA-binding fragment",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Sequence encoding a site-specific DNA-binding domain fused to a heterodimerization domain, where the process of heterodimerization mediated by this domain can be regulated by binding to a small molecule, such as an ion or ligand. A functional transcription driver can be reconstituted in vivo if this split system component is brought together with a split system component that encodes a transcription activation domain fused to the complementary heterodimerization domain and the appropriate small molecule stimulus is applied.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "comments" : [ "Obsoleted in favor of terms that do not conflate the type of the fragment with the type of conditional regulation." ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "http://orcid.org/0000-0002-1373-1705"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2022-05-04T14:38:38Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "FBcv:0005054"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
           "val" : "FBcv:0009030"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "FBcv:0005054"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "FlyBase miscellaneous CV"
@@ -64106,7 +64174,7 @@
           "val" : "2023-02-24T19:16:13Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "FlyBase miscellaneous CV"
+          "val" : "result_type"
         } ]
       }
     }, {
@@ -67068,10 +67136,6 @@
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
       "lbl" : "consider",
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-      "lbl" : "created by",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -75365,11 +75429,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_83813",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33575"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_83813",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_35352"
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33709"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_83820",
       "pred" : "is_a",
@@ -81102,6 +81162,10 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002180",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002254"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
       "pred" : "subPropertyOf",
