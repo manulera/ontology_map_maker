@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "13:06:2024 13:39"
+        "val" : "08:08:2024 13:54"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-06-13"
+        "val" : "2024-08-08"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-06-13/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-08-08/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -4029,11 +4029,17 @@
           "xrefs" : [ "KEGG_COMPOUND" ]
         } ],
         "xrefs" : [ {
-          "val" : "KEGG:C00115"
+          "val" : "FooDB:FDB006557"
+        }, {
+          "val" : "HMDB:HMDB0000492"
         }, {
           "val" : "KEGG:C00698"
         }, {
+          "val" : "MetaCyc:CL-"
+        }, {
           "val" : "PDBeChem:CL"
+        }, {
+          "val" : "Wikipedia:Chloride"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -4420,6 +4426,10 @@
         } ],
         "xrefs" : [ {
           "val" : "KEGG:C00009"
+        }, {
+          "val" : "PDBeChem:PO4"
+        }, {
+          "val" : "Wikipedia:Phosphate"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -36281,7 +36291,7 @@
       "meta" : {
         "definition" : {
           "val" : "Phenotype that is any abnormality in mitotic cell cycle (GO:0000278). 'mitotic cell cycle' is defined as: 'Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent.'",
-          "xrefs" : [ "FBC:DOS", "GOC:mah", "ISBN:0815316194", "Reactome:69278" ]
+          "xrefs" : [ "FBC:DOS", "GOC:mah", "ISBN:0815316194" ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -50008,7 +50018,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Component that forms part of a 'split system'. A split system component corresponds to a non-functional fragment of a functional experimental tool that would normally be encoded by a single gene product. When combined with another appropriate split system component in vivo, a functional experimental tool is produced. The fragments of a split system can be brought together in vivo in a number of different ways; for example, by fusing fragments to peptides that physically interact in vivo.",
+          "val" : "Component that forms part of a 'split system'. A split system component corresponds to a non-functional fragment of a functional experimental tool. When combined with another appropriate split system component in vivo, a functional experimental tool is produced. The fragments of a split system can be brought together in vivo in a number of different ways; for example, by fusing fragments to peptides that physically interact in vivo.",
           "xrefs" : [ "FBC:GM" ]
         },
         "basicPropertyValues" : [ {
@@ -54405,6 +54415,366 @@
         }, {
           "pred" : "http://purl.org/dc/terms/date",
           "val" : "2024-05-29T10:13:50Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009038",
+      "lbl" : "conditional RNA-guided nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An enzyme that catalyzes hydrolysis of DNA in a site-specific manner, where the specificity is determined by a guide RNA that contains sequence complementary to the DNA sequence of interest (rather than being an inherent property of the nuclease itself) and where the nuclease activity can be regulated in response to a particular stimulus.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T10:42:33Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009039",
+      "lbl" : "small molecule-regulated RNA-guided nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An enzyme that catalyzes hydrolysis of DNA in a site-specific manner, where the specificity is determined by a guide RNA that contains sequence complementary to the DNA sequence of interest (rather than being an inherent property of the nuclease itself) and where the nuclease activity can be regulated by binding to a small molecule, such as an ion or ligand.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T10:44:12Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009040",
+      "lbl" : "protein splicing tag",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms part of the protein product encoded by a transgenic locus or modified endogenous locus and which results in the tagged gene product undergoing protein splicing.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T10:47:32Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009041",
+      "lbl" : "conditional protein splicing tag",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms part of the protein product encoded by a transgenic locus or modified endogenous locus and which results in the tagged gene product undergoing protein splicing, where this process can be regulated in response to a particular stimulus.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T10:48:27Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009042",
+      "lbl" : "small molecule-regulated protein splicing tag",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms part of the protein product encoded by a transgenic locus or modified endogenous locus and which results in the tagged gene product undergoing protein splicing, where this process can be regulated by binding to a small molecule, such as an ion or ligand.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T10:49:38Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009043",
+      "lbl" : "cell viability regulation tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms all or part of the gene product encoded by a transgenic locus or modified endogenous locus and that confers a specific property used to regulate the viability of a specific cell or anatomical structure.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:04:56Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009044",
+      "lbl" : "cell death inhibition tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms all or part of the gene product encoded by a transgenic locus or modified endogenous locus and that confers a specific property used to inhibit cell death in a specific cell or anatomical structure.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:06:20Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009045",
+      "lbl" : "split genome engineering tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a genome engineering tool. A functional genome engineering tool can be reconstituted when complementary split genome engineering tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:11:57Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009046",
+      "lbl" : "split gene product engineering tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a gene product engineering tool. A functional gene product engineering tool can be reconstituted when complementary split gene product engineering tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:13:39Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009047",
+      "lbl" : "split gene product detection tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a gene product detection tool. A functional gene product detection tool can be reconstituted when complementary split gene product detection tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:14:32Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009048",
+      "lbl" : "split protein detection tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a protein detection tool. A functional protein detection tool can be reconstituted when complementary split protein detection tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:15:29Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009049",
+      "lbl" : "split cell viability regulation tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a cell viability regulation tool. A functional cell viability regulation tool can be reconstituted when complementary split cell viability regulation tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:16:29Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009050",
+      "lbl" : "split nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a nuclease. A functional nuclease can be reconstituted when complementary split nuclease fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:30:43Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009051",
+      "lbl" : "split RNA-guided nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of an RNA-guided nuclease. A functional RNA-guided nuclease can be reconstituted when complementary split RNA-guided nuclease fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:31:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009052",
+      "lbl" : "conditional split RNA-guided nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of an RNA-guided nuclease that can be used to reconstitute a functional RNA-guided nuclease when brought together in vivo with a complementary split RNA-guided nuclease fragment, where the process that brings the complementary fragments together can be regulated in response to a particular stimulus.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:33:51Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009053",
+      "lbl" : "small molecule-regulated split RNA-guided nuclease",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of an RNA-guided nuclease that can be used to reconstitute a functional RNA-guided nuclease when brought together in vivo with a complementary split RNA-guided nuclease fragment, where the process that brings the complementary fragments together can be regulated by binding to a small molecule, such as an ion or ligand.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:35:10Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009054",
+      "lbl" : "split protein splicing tag",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Sequence that forms part of the protein product encoded by a transgenic locus or modified endogenous locus and that can catalyze protein splicing when brought together with a complementary split protein splicing tag in vivo. Typically used to join two separate protein sequences by trans-splicing; in this case the two separate protein sequences are each initially tagged with one half of a pair of complementary split protein splicing tags. Alternatively, if both halves of a pair of complementary split protein splicing tags are used to tag each end of a single protein sequence, they can be used to generate a cyclized protein molecule.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-06-24T11:44:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "experimental_tool_descriptor"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009055",
+      "lbl" : "split specific binding tool",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Non-functional fragment of a specific binding tool. A functional specific binding tool can be reconstituted when complementary split specific binding tool fragments are brought together in vivo, for example by fusing the fragments to peptides that physically interact.",
+          "xrefs" : [ "FBC:GM" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-07-23T11:51:23Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "experimental_tool_descriptor"
@@ -68589,11 +68959,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005052",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005053",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0005054",
       "pred" : "is_a",
@@ -68793,7 +69163,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007013",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005001"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009043"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007014",
       "pred" : "is_a",
@@ -68853,7 +69223,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007028",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009045"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0007029",
       "pred" : "is_a",
@@ -69433,7 +69803,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009031",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009046"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009032",
       "pred" : "is_a",
@@ -69449,7 +69819,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009035",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009049"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009036",
       "pred" : "is_a",
@@ -69458,6 +69828,78 @@
       "sub" : "http://purl.obolibrary.org/obo/FBcv_0009037",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0009036"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009038",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005078"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009039",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009038"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009022"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009041",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009042",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009041"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009043",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009044",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009043"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009045",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009046",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009047",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009048",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009047"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009049",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009050",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009045"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009052",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009053",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009046"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009055",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0005051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "subPropertyOf",
