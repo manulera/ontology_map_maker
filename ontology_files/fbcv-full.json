@@ -31,7 +31,7 @@
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "08:08:2024 13:54"
+        "val" : "17:10:2024 15:25"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-08-08"
+        "val" : "2024-10-17"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-08-08/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-10-17/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
