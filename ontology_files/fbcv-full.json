@@ -9,29 +9,29 @@
         "pred" : "http://purl.obolibrary.org/obo/fbcv#attributionURL",
         "val" : "http://dx.doi.org/10.1186/2041-1480-4-30"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "pred" : "http://purl.org/dc/terms/creator",
         "val" : "http://orcid.org/0000-0002-1373-1705"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "pred" : "http://purl.org/dc/terms/creator",
         "val" : "http://orcid.org/0000-0002-7073-9172"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "pred" : "http://purl.org/dc/terms/creator",
         "val" : "https://orcid.org/0000-0001-5948-3092"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/creator",
+        "pred" : "http://purl.org/dc/terms/creator",
         "val" : "https://orcid.org/0000-0002-0027-0858"
       }, {
-        "pred" : "http://purl.org/dc/elements/1.1/description",
+        "pred" : "http://purl.org/dc/terms/description",
         "val" : "A miscellaneous ontology of terms used for curation in FlyBase, including the DPO."
-      }, {
-        "pred" : "http://purl.org/dc/elements/1.1/title",
-        "val" : "FlyBase Controlled Vocabulary (FBcv)"
       }, {
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://creativecommons.org/licenses/by/4.0/"
       }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "FlyBase Controlled Vocabulary (FBcv)"
+      }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "17:10:2024 15:25"
+        "val" : "05:12:2024 13:42"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-10-17"
+        "val" : "2024-12-05"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-10-17/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2024-12-05/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -5541,7 +5541,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "Any compound that produces a peak used to reference an NMR spectrum during data pre-processing."
+          "val" : "Any compound that produces a peak used as reference frequency in the delta chemical shift scale."
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
@@ -14996,8 +14996,8 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "alpha-amino-acid anion",
+          "pred" : "hasRelatedSynonym",
+          "val" : "alpha-amino acid anion",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -15835,12 +15835,12 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "amino-acid cation",
+          "pred" : "hasRelatedSynonym",
+          "val" : "amino acid cation",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
-          "val" : "amino acid cation",
+          "val" : "amino acid cations",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -15919,6 +15919,10 @@
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
+          "val" : "amino acid residues",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
           "val" : "amino-acid residues",
           "xrefs" : [ "JCBN" ]
         } ],
@@ -15974,8 +15978,8 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "alpha-amino-acid cation",
+          "pred" : "hasRelatedSynonym",
+          "val" : "alpha-amino acid cation",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -16901,7 +16905,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_35238",
-      "lbl" : "amino acid zwitterion",
+      "lbl" : "amino-acid zwitterion",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -16909,8 +16913,16 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
+          "pred" : "hasRelatedSynonym",
           "val" : "amino acid zwitterion",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "amino acid zwitterions",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "amino-acid zwitterions",
           "xrefs" : [ "ChEBI" ]
         } ],
         "basicPropertyValues" : [ {
@@ -19280,8 +19292,8 @@
       "meta" : {
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "amino-acid anion",
+          "pred" : "hasRelatedSynonym",
+          "val" : "amino acid anion",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -21172,6 +21184,10 @@
           "pred" : "hasExactSynonym",
           "val" : "ETHANE",
           "xrefs" : [ "PDBeChem" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "ethane",
+          "xrefs" : [ "UniProt" ]
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "Aethan",
@@ -23414,7 +23430,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A role played by a chemical compound exihibiting itself through the ability to induce damage to the liver in animals."
+          "val" : "A role played by a chemical compound exhibiting itself through the ability to induce damage to the liver in animals."
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
@@ -23461,12 +23477,16 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A role played by a chemical compound exihibiting itself through the ability to induce damage to the kidney in animals."
+          "val" : "A role played by any chemical compound (natural or synthetic) exhibiting itself through the ability to induce damage to the kidneys."
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "agente nefrotoxico",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "nephrotoxic agents",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -25587,25 +25607,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/CHEBI_61015",
-      "lbl" : "nephrotoxin",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A poison that interferes with the function of the kidneys."
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "nephrotoxins",
-          "xrefs" : [ "ChEBI" ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "chebi_ontology"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_61120",
       "lbl" : "nucleobase-containing molecular entity",
       "type" : "CLASS",
@@ -26438,10 +26439,6 @@
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "anionic amino acid residues",
-          "xrefs" : [ "ChEBI" ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "anionic amino-acid residues",
           "xrefs" : [ "ChEBI" ]
         } ],
         "basicPropertyValues" : [ {
@@ -28835,14 +28832,26 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_78608",
-      "lbl" : "alpha-amino acid zwitterion",
+      "lbl" : "alpha-amino-acid zwitterion",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An amino acid zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3."
+          "val" : "An amino acid-zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3."
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "alpha-amino acid zwitterion",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "alpha-amino acid zwitterions",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "alpha-amino-acid zwitterions",
+          "xrefs" : [ "ChEBI" ]
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "an alpha-amino acid",
           "xrefs" : [ "UniProt" ]
@@ -29236,7 +29245,7 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_83821",
-      "lbl" : "amino acid derivative",
+      "lbl" : "amino-acid derivative",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
@@ -29245,7 +29254,15 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/chebi#3_STAR" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
+          "val" : "amino acid derivative",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
           "val" : "amino acid derivatives",
+          "xrefs" : [ "ChEBI" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "amino-acid derivatives",
           "xrefs" : [ "ChEBI" ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -55741,27 +55758,15 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
-      "id" : "http://purl.org/dc/elements/1.1/creator",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/description",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/source",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/title",
-      "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION"
-    }, {
       "id" : "http://purl.org/dc/elements/1.1/type",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.org/dc/terms/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/creator",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -55774,6 +55779,10 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/source",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -59227,7 +59236,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_27899",
       "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_61015"
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50909"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_27899",
       "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
@@ -59752,10 +59761,6 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_29228",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_37176"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_29228",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_228364"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_29228",
       "pred" : "http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of",
@@ -63556,14 +63561,6 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_60895",
       "pred" : "http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_16733"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_61015",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_50909"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_61015",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_64909"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_61120",
       "pred" : "is_a",
