@@ -31,7 +31,7 @@
         "val" : "FlyBase Controlled Vocabulary (FBcv)"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#date",
-        "val" : "13:02:2025 11:54"
+        "val" : "27:03:2025 12:07"
       }, {
         "pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
         "val" : "FlyBase miscellaneous CV"
@@ -40,9 +40,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-02-13"
+        "val" : "2025-03-27"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2025-02-13/fbcv-full.json"
+      "version" : "http://purl.obolibrary.org/obo/fbcv/releases/2025-03-27/fbcv-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -54834,6 +54834,46 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009057",
+      "lbl" : "single-cell RNA-sequencing analysis method",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A method, or a set of methods, used to analyze single-cell RNA-sequencing data and produce a cell-by-gene expression matrix.",
+          "xrefs" : [ "FBC:DPG" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2025-02-25T11:24:12Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "result_attribute"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/FBcv_0009058",
+      "lbl" : "EMBL-EBI SCEA standard analysis method",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The single-cell RNA-sequencing analysis method used by the EMBL-EBI's Single-Cell Expression Atlas.",
+          "xrefs" : [ "PMID:37992296" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6095-8718"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2025-02-25T11:42:22Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "result_attribute"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/FBcv_0010000",
       "lbl" : "obsolete living stock",
       "type" : "CLASS",
@@ -55455,7 +55495,8 @@
       "meta" : {
         "definition" : {
           "val" : "x has the potential to develop into y iff x develops into y or if x is capable of developing into y"
-        }
+        },
+        "comments" : [ "This relation has a stronger meaning than merely indicating that X may develop into Y, in that the capability of developing into Y is always present, even if X does not always actually develop into Y. In particular, this means that if Y is restricted to a given taxon T, X is necessarily likewise restricted." ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002388",
@@ -69938,6 +69979,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/FBcv_0009005"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009057",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0003222"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/FBcv_0009058",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/FBcv_0009057"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002131"
@@ -70529,7 +70578,7 @@
       "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000051", "http://purl.obolibrary.org/obo/RO_0002131" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002254",
-      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000051", "http://purl.obolibrary.org/obo/RO_0002202" ]
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000051", "http://purl.obolibrary.org/obo/RO_0002254" ]
     }, {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002314",
       "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0000052", "http://purl.obolibrary.org/obo/BFO_0000050" ]
